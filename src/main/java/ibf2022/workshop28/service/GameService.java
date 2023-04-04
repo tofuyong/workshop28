@@ -24,7 +24,7 @@ public class GameService {
     String timestamp = format.format(timeNow);
 
 
-     /****************** TASK A *******************/
+    /****************** TASK A *******************/
     public Document createResultDoc(int gid) throws GameReviewException {
         Document doc = gameRepo.findGameByGID(gid);
         Document docAvg = gameRepo.getAverageRating(gid);
@@ -56,7 +56,7 @@ public class GameService {
     }
 
 
-     /****************** TASK B *******************/
+    /****************** TASK B *******************/
     public String getNameByID(int gid) {
         Document result = gameRepo.findGameByGID(gid);
         return result.getString("name");
@@ -85,5 +85,4 @@ public class GameService {
         }
         return games;
     }
-
 }

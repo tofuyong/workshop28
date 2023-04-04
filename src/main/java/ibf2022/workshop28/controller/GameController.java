@@ -23,7 +23,7 @@ public class GameController {
     @Autowired
     GameService gameSvc;
 
-     /****************** TASK A *******************/
+    /****************** TASK A *******************/
     @GetMapping(path="/game/{game_id}/reviews")
     public ResponseEntity<String> getGameReviews(@PathVariable("game_id") int gid) {
         try {
@@ -34,8 +34,8 @@ public class GameController {
         }
     }
 
-    
-     /****************** TASK B *******************/
+
+    /****************** TASK B *******************/
     @GetMapping(path="/games/{direction}")
     public ResponseEntity<String> showRanked(@PathVariable("direction") String highestOrLowest)  {
         if (!highestOrLowest.equals("highest") && !highestOrLowest.equals("lowest")) {
