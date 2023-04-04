@@ -1,5 +1,6 @@
 package ibf2022.workshop28.model;
 
+// did not use this POJO 
 public class Game {
     
     private int gid;
@@ -27,5 +28,18 @@ public class Game {
 
     public String getUrl() {return this.url;}
     public void setUrl(String url) {this.url = url;}
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " gid='" + getGid() + "'" +
+            ", name='" + getName() + "'" +
+            ", year='" + getYear() + "'" +
+            ", rank='" + getRank() + "'" +
+            ", users_rated='" + getUsers_rated() + "'" +
+            ", url='" + getUrl() + "'" +
+            "}";
+    }
 
 }
